@@ -25,7 +25,6 @@ class ViewController: UIViewController {
             return number
         }
         set{
-            //displayLabel.text = newValue.isInt ? String(Int(newValue)) : String(newValue)
             displayLabel.text = newValue.isInt ? Int(newValue).description : newValue.description
         }
     }
@@ -41,7 +40,6 @@ class ViewController: UIViewController {
             highlightButton(symbol: calcMethod)
             if let result = logic.calculate(symbol: calcMethod){
                 displayValue = result
-                //isFinishedTypingNumber = !(calcMethod == "=" || calcMethod == "AC")
                 isFinishedTypingNumber = calcMethod.isTerminatingCharacter
             }
         }
@@ -61,10 +59,6 @@ class ViewController: UIViewController {
                 isFinishedTypingNumber = false
             } else {
                 if( numValue == ".") {
-                   //let isInt = floor(displayValue) == displayValue
-                   //if !isInt {
-                   //    return
-                   //}
                    if let displayLabelText = displayLabel.text, displayLabelText.contains(".") {
                        return
                    }

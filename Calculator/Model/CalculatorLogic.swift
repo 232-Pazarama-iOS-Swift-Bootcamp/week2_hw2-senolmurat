@@ -33,20 +33,6 @@ struct CalculatorLogic{
                 return number * 0.01
             case "=":
                 let result: Double? = performTwoNumberCalculation(n2 : number)
-                //if let operation = intermediateCalculation?.calcMethod{
-                //    switch operation{
-                //    case "+":
-                //        intermediateCalculation?.n1 = 0
-                //    case "-":
-                //        intermediateCalculation?.n1 = 0
-                //    case "×":
-                //        intermediateCalculation?.n1 = 1
-                //    case "÷":
-                //        intermediateCalculation?.n1 = 1
-                //    default:
-                //        fatalError("Error")
-                //    }
-                //}
                 intermediateCalculation = nil
                 return result
             default:
